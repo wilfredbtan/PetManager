@@ -9,15 +9,11 @@ import SwiftUI
 
 class PetManagerViewModel: ObservableObject {
     
-    @Published private var model: PetManagerModel = PetManagerViewModel.createPetManager()
-    
-    private static func createPetManager() -> PetManagerModel {
-        return PetManagerModel(petType: .cat)
-    }
+    @Published private var model = PetManagerModel()
     
     // MARK: - Access to Model
     
-    var pets: [PetManagerModel.Pet] {
+    var pets: [Pet] {
         model.pets
     }
     

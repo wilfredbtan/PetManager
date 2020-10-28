@@ -10,6 +10,7 @@ import SwiftUI
 struct PetManagerView: View {
     
     @ObservedObject var viewModel: PetManagerViewModel
+    @ObservedObject var keyboardGuardian: KeyboardGuardian
     
     @State private var isShowingAdder = false
     @State private var newName = ""
@@ -19,6 +20,7 @@ struct PetManagerView: View {
         VStack {
             Text("My Pet Manager")
                 .font(.largeTitle)
+                .padding(.top)
 
             TextField("Enter Name", text: $newName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -30,9 +32,12 @@ struct PetManagerView: View {
 
             HStack {
                 Button(action: {
-                    addPet(name: newName, breed: newBreed)
+                    withAnimation {
+                        addPet(name: newName, breed: newBreed)
+                    }
                     newName = ""
                     newBreed = ""
+                    self.hideKeyboard()
                 }) {
                     Text("Add")
                 }
@@ -50,20 +55,36 @@ struct PetManagerView: View {
                 .onDelete(perform: delete)
             }
         }
+        .gesture(tapGesture)
     }
     
-    func delete(at offsets: IndexSet) {
+    private func delete(at offsets: IndexSet) {
         viewModel.remove(petAt: offsets)
     }
     
-    func addPet(name: String, breed: String) {
+    private func addPet(name: String, breed: String) {
         viewModel.addPet(name, breed)
+    }
+    
+    private var tapGesture: some Gesture {
+        let gesture = TapGesture().onEnded {
+            hideKeyboard()
+        }
+        return keyboardGuardian.keyboardIsHidden ? nil : gesture
     }
     
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PetManagerView(viewModel: PetManagerViewModel())
+        PetManagerView(viewModel: PetManagerViewModel(), keyboardGuardian: KeyboardGuardian())
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif

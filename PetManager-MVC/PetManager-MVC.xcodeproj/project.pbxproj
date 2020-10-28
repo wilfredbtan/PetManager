@@ -7,33 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		499F7D072549B2A200FD045C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D062549B2A200FD045C /* AppDelegate.swift */; };
-		499F7D092549B2A200FD045C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D082549B2A200FD045C /* SceneDelegate.swift */; };
-		499F7D0B2549B2A200FD045C /* PetManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D0A2549B2A200FD045C /* PetManagerView.swift */; };
-		499F7D0D2549B2A400FD045C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499F7D0C2549B2A400FD045C /* Assets.xcassets */; };
-		499F7D102549B2A400FD045C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499F7D0F2549B2A400FD045C /* Preview Assets.xcassets */; };
-		499F7D132549B2A400FD045C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499F7D112549B2A400FD045C /* LaunchScreen.storyboard */; };
-		499F7D1F2549B44100FD045C /* PetManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D1E2549B44100FD045C /* PetManagerViewModel.swift */; };
-		499F7D222549B48300FD045C /* PetManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D212549B48300FD045C /* PetManagerModel.swift */; };
-		499F7D87254A64F900FD045C /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D86254A64F900FD045C /* KeyboardGuardian.swift */; };
+		499F7D6C2549D2F100FD045C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D6B2549D2F100FD045C /* AppDelegate.swift */; };
+		499F7D6E2549D2F100FD045C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D6D2549D2F100FD045C /* SceneDelegate.swift */; };
+		499F7D702549D2F200FD045C /* PetManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D6F2549D2F200FD045C /* PetManagerController.swift */; };
+		499F7D732549D2F200FD045C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499F7D712549D2F200FD045C /* Main.storyboard */; };
+		499F7D752549D2F400FD045C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499F7D742549D2F400FD045C /* Assets.xcassets */; };
+		499F7D782549D2F400FD045C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499F7D762549D2F400FD045C /* LaunchScreen.storyboard */; };
+		499F7D832549D3E500FD045C /* PetManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D822549D3E500FD045C /* PetManagerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		499F7D032549B2A200FD045C /* PetManager-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PetManager-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		499F7D062549B2A200FD045C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		499F7D082549B2A200FD045C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		499F7D0A2549B2A200FD045C /* PetManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetManagerView.swift; sourceTree = "<group>"; };
-		499F7D0C2549B2A400FD045C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		499F7D0F2549B2A400FD045C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		499F7D122549B2A400FD045C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		499F7D142549B2A400FD045C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		499F7D1E2549B44100FD045C /* PetManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetManagerViewModel.swift; sourceTree = "<group>"; };
-		499F7D212549B48300FD045C /* PetManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetManagerModel.swift; sourceTree = "<group>"; };
-		499F7D86254A64F900FD045C /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
+		499F7D682549D2F100FD045C /* PetManager-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PetManager-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		499F7D6B2549D2F100FD045C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		499F7D6D2549D2F100FD045C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		499F7D6F2549D2F200FD045C /* PetManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetManagerController.swift; sourceTree = "<group>"; };
+		499F7D722549D2F200FD045C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		499F7D742549D2F400FD045C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		499F7D772549D2F400FD045C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		499F7D792549D2F400FD045C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		499F7D822549D3E500FD045C /* PetManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetManagerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		499F7D002549B2A200FD045C /* Frameworks */ = {
+		499F7D652549D2F100FD045C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,82 +39,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		499F7CFA2549B2A100FD045C = {
+		499F7D5F2549D2F100FD045C = {
 			isa = PBXGroup;
 			children = (
-				499F7D052549B2A200FD045C /* PetManager-MVVM */,
-				499F7D042549B2A200FD045C /* Products */,
+				499F7D6A2549D2F100FD045C /* PetManager-MVC */,
+				499F7D692549D2F100FD045C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		499F7D042549B2A200FD045C /* Products */ = {
+		499F7D692549D2F100FD045C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				499F7D032549B2A200FD045C /* PetManager-MVVM.app */,
+				499F7D682549D2F100FD045C /* PetManager-MVC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		499F7D052549B2A200FD045C /* PetManager-MVVM */ = {
+		499F7D6A2549D2F100FD045C /* PetManager-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				499F7D062549B2A200FD045C /* AppDelegate.swift */,
-				499F7D082549B2A200FD045C /* SceneDelegate.swift */,
-				499F7D0A2549B2A200FD045C /* PetManagerView.swift */,
-				499F7D1E2549B44100FD045C /* PetManagerViewModel.swift */,
-				499F7D212549B48300FD045C /* PetManagerModel.swift */,
-				499F7D86254A64F900FD045C /* KeyboardGuardian.swift */,
-				499F7D0C2549B2A400FD045C /* Assets.xcassets */,
-				499F7D112549B2A400FD045C /* LaunchScreen.storyboard */,
-				499F7D142549B2A400FD045C /* Info.plist */,
-				499F7D0E2549B2A400FD045C /* Preview Content */,
+				499F7D6B2549D2F100FD045C /* AppDelegate.swift */,
+				499F7D6D2549D2F100FD045C /* SceneDelegate.swift */,
+				499F7D6F2549D2F200FD045C /* PetManagerController.swift */,
+				499F7D822549D3E500FD045C /* PetManagerModel.swift */,
+				499F7D712549D2F200FD045C /* Main.storyboard */,
+				499F7D742549D2F400FD045C /* Assets.xcassets */,
+				499F7D762549D2F400FD045C /* LaunchScreen.storyboard */,
+				499F7D792549D2F400FD045C /* Info.plist */,
 			);
-			path = "PetManager-MVVM";
-			sourceTree = "<group>";
-		};
-		499F7D0E2549B2A400FD045C /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				499F7D0F2549B2A400FD045C /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = "PetManager-MVC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		499F7D022549B2A200FD045C /* PetManager-MVVM */ = {
+		499F7D672549D2F100FD045C /* PetManager-MVC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 499F7D172549B2A400FD045C /* Build configuration list for PBXNativeTarget "PetManager-MVVM" */;
+			buildConfigurationList = 499F7D7C2549D2F400FD045C /* Build configuration list for PBXNativeTarget "PetManager-MVC" */;
 			buildPhases = (
-				499F7CFF2549B2A200FD045C /* Sources */,
-				499F7D002549B2A200FD045C /* Frameworks */,
-				499F7D012549B2A200FD045C /* Resources */,
+				499F7D642549D2F100FD045C /* Sources */,
+				499F7D652549D2F100FD045C /* Frameworks */,
+				499F7D662549D2F100FD045C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "PetManager-MVVM";
-			productName = "PetManager-MVVM";
-			productReference = 499F7D032549B2A200FD045C /* PetManager-MVVM.app */;
+			name = "PetManager-MVC";
+			productName = "PetManager-MVC";
+			productReference = 499F7D682549D2F100FD045C /* PetManager-MVC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		499F7CFB2549B2A100FD045C /* Project object */ = {
+		499F7D602549D2F100FD045C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					499F7D022549B2A200FD045C = {
+					499F7D672549D2F100FD045C = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = 499F7CFE2549B2A100FD045C /* Build configuration list for PBXProject "PetManager-MVVM" */;
+			buildConfigurationList = 499F7D632549D2F100FD045C /* Build configuration list for PBXProject "PetManager-MVC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,50 +112,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 499F7CFA2549B2A100FD045C;
-			productRefGroup = 499F7D042549B2A200FD045C /* Products */;
+			mainGroup = 499F7D5F2549D2F100FD045C;
+			productRefGroup = 499F7D692549D2F100FD045C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				499F7D022549B2A200FD045C /* PetManager-MVVM */,
+				499F7D672549D2F100FD045C /* PetManager-MVC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		499F7D012549B2A200FD045C /* Resources */ = {
+		499F7D662549D2F100FD045C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499F7D132549B2A400FD045C /* LaunchScreen.storyboard in Resources */,
-				499F7D102549B2A400FD045C /* Preview Assets.xcassets in Resources */,
-				499F7D0D2549B2A400FD045C /* Assets.xcassets in Resources */,
+				499F7D782549D2F400FD045C /* LaunchScreen.storyboard in Resources */,
+				499F7D752549D2F400FD045C /* Assets.xcassets in Resources */,
+				499F7D732549D2F200FD045C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		499F7CFF2549B2A200FD045C /* Sources */ = {
+		499F7D642549D2F100FD045C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499F7D222549B48300FD045C /* PetManagerModel.swift in Sources */,
-				499F7D87254A64F900FD045C /* KeyboardGuardian.swift in Sources */,
-				499F7D072549B2A200FD045C /* AppDelegate.swift in Sources */,
-				499F7D092549B2A200FD045C /* SceneDelegate.swift in Sources */,
-				499F7D1F2549B44100FD045C /* PetManagerViewModel.swift in Sources */,
-				499F7D0B2549B2A200FD045C /* PetManagerView.swift in Sources */,
+				499F7D702549D2F200FD045C /* PetManagerController.swift in Sources */,
+				499F7D832549D3E500FD045C /* PetManagerModel.swift in Sources */,
+				499F7D6C2549D2F100FD045C /* AppDelegate.swift in Sources */,
+				499F7D6E2549D2F100FD045C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		499F7D112549B2A400FD045C /* LaunchScreen.storyboard */ = {
+		499F7D712549D2F200FD045C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				499F7D122549B2A400FD045C /* Base */,
+				499F7D722549D2F200FD045C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		499F7D762549D2F400FD045C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				499F7D772549D2F400FD045C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -177,7 +169,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		499F7D152549B2A400FD045C /* Debug */ = {
+		499F7D7A2549D2F400FD045C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		499F7D162549B2A400FD045C /* Release */ = {
+		499F7D7B2549D2F400FD045C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,44 +285,40 @@
 			};
 			name = Release;
 		};
-		499F7D182549B2A400FD045C /* Debug */ = {
+		499F7D7D2549D2F400FD045C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PetManager-MVVM/Preview Content\"";
 				DEVELOPMENT_TEAM = TG3H48ZPJF;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "PetManager-MVVM/Info.plist";
+				INFOPLIST_FILE = "PetManager-MVC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilfredbtan.PetManager-MVVM";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wilfredbtan.PetManager-MVC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		499F7D192549B2A400FD045C /* Release */ = {
+		499F7D7E2549D2F400FD045C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PetManager-MVVM/Preview Content\"";
 				DEVELOPMENT_TEAM = TG3H48ZPJF;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "PetManager-MVVM/Info.plist";
+				INFOPLIST_FILE = "PetManager-MVC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilfredbtan.PetManager-MVVM";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wilfredbtan.PetManager-MVC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,25 +328,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		499F7CFE2549B2A100FD045C /* Build configuration list for PBXProject "PetManager-MVVM" */ = {
+		499F7D632549D2F100FD045C /* Build configuration list for PBXProject "PetManager-MVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				499F7D152549B2A400FD045C /* Debug */,
-				499F7D162549B2A400FD045C /* Release */,
+				499F7D7A2549D2F400FD045C /* Debug */,
+				499F7D7B2549D2F400FD045C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		499F7D172549B2A400FD045C /* Build configuration list for PBXNativeTarget "PetManager-MVVM" */ = {
+		499F7D7C2549D2F400FD045C /* Build configuration list for PBXNativeTarget "PetManager-MVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				499F7D182549B2A400FD045C /* Debug */,
-				499F7D192549B2A400FD045C /* Release */,
+				499F7D7D2549D2F400FD045C /* Debug */,
+				499F7D7E2549D2F400FD045C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 499F7CFB2549B2A100FD045C /* Project object */;
+	rootObject = 499F7D602549D2F100FD045C /* Project object */;
 }

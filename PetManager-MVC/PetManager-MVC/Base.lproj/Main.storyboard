@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pet Manager Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PetManagerController" customModule="PetManager_MVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pet Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-qK-q1g">
+                                <rect key="frame" x="98.5" y="64" width="217" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="job-Bm-KTw">
+                                <rect key="frame" x="20.5" y="195" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-hV-bqs">
+                                <rect key="frame" x="20.5" y="121" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO6-pg-IwD">
+                                <rect key="frame" x="177" y="249" width="60" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ZmG-Zm-bJl"/>
+                                    <constraint firstAttribute="height" constant="40" id="ulb-c6-l8N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dr-S5-0K5"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ESY-Y1-t7W">
+                                <rect key="frame" x="10" y="309" width="394" height="553"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PET_CELL" id="QoF-GD-3Gx">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QoF-GD-3Gx" id="2Fc-Y9-Njg">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5qy-hV-bqs" firstAttribute="top" secondItem="JRh-qK-q1g" secondAttribute="bottom" constant="20" id="2Ce-tQ-Ikf"/>
+                            <constraint firstItem="job-Bm-KTw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Hg-hW-gz8"/>
+                            <constraint firstItem="ZO6-pg-IwD" firstAttribute="top" secondItem="job-Bm-KTw" secondAttribute="bottom" constant="20" id="Boq-xs-qmp"/>
+                            <constraint firstItem="JRh-qK-q1g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DNR-gB-hMZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ESY-Y1-t7W" secondAttribute="trailing" constant="10" id="Elx-3s-13o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ESY-Y1-t7W" secondAttribute="bottom" id="TjJ-ei-A3r"/>
+                            <constraint firstItem="5qy-hV-bqs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="YtV-1n-Uhg"/>
+                            <constraint firstItem="5qy-hV-bqs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bxC-kN-DvG"/>
+                            <constraint firstItem="ZO6-pg-IwD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f41-8z-M6H"/>
+                            <constraint firstItem="ESY-Y1-t7W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jV9-xJ-Fb0"/>
+                            <constraint firstItem="job-Bm-KTw" firstAttribute="top" secondItem="5qy-hV-bqs" secondAttribute="bottom" constant="40" id="pVa-fY-lZy"/>
+                            <constraint firstItem="ESY-Y1-t7W" firstAttribute="top" secondItem="ZO6-pg-IwD" secondAttribute="bottom" constant="20" id="sGQ-wO-ub3"/>
+                            <constraint firstItem="job-Bm-KTw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="sXX-Xm-Db4"/>
+                            <constraint firstItem="JRh-qK-q1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uA4-Cb-TBH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="ZO6-pg-IwD" id="lVw-HQ-vOs"/>
+                        <outlet property="breedTextField" destination="job-Bm-KTw" id="gNd-Jx-wPq"/>
+                        <outlet property="nameTextField" destination="5qy-hV-bqs" id="AJp-T2-fcd"/>
+                        <outlet property="petTable" destination="ESY-Y1-t7W" id="g0b-dn-sBJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
