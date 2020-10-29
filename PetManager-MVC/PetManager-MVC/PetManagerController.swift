@@ -34,10 +34,6 @@ class PetManagerController: UIViewController {
     
 
     @IBAction func addPet(_ sender: Any) {
-        print("add pet")
-        print("name: \(nameTextField.text)")
-        print("name: \(breedTextField.text)")
-        
         guard let name = nameTextField.text, let breed = breedTextField.text else { return }
         
         model.addPet(name, breed)
