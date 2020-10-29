@@ -95,9 +95,9 @@ extension PetManagerController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - Delegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cat = model.pets[indexPath.row]
-        let name = cat.name
-        let response = model.getResponse(from: cat)
+        let pet = model.pets[indexPath.row]
+        let name = pet.name
+        let response = model.getResponse(from: pet)
 
         let satisfyAlert = UIAlertController(title: "\(name)", message: response, preferredStyle: .alert)
         satisfyAlert.addAction(UIAlertAction(title: "Aww", style: .cancel, handler: nil))

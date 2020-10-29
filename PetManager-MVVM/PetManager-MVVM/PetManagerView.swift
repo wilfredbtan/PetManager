@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PetManagerView: View {
     
-    @ObservedObject var viewModel: PetManagerViewModel
+    @ObservedObject var viewModel: PetManagerViewModel      // 1. Observed ViewModel
     @ObservedObject var keyboardGuardian: KeyboardGuardian
     
     @State private var isShowingAdder = false
@@ -41,7 +41,7 @@ struct PetManagerView: View {
                 }) {
                     Text("Add")
                 }
-                .frame(height: 5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(height: 5, alignment: .center)
                 .padding()
                 .background(Color.blue)
                 .foregroundColor(.white)
