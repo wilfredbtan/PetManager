@@ -18,48 +18,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pet Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-qK-q1g">
-                                <rect key="frame" x="98.5" y="64" width="217" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="job-Bm-KTw">
-                                <rect key="frame" x="20.5" y="195" width="373" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-hV-bqs">
-                                <rect key="frame" x="20.5" y="121" width="373" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO6-pg-IwD">
-                                <rect key="frame" x="177" y="249" width="60" height="40"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bco-Td-RAn" userLabel="FormContainer">
+                                <rect key="frame" x="0.0" y="44" width="414" height="255"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pet Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9a-i8-lwv">
+                                        <rect key="frame" x="98.5" y="20" width="217" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ne1-rC-e94">
+                                        <rect key="frame" x="20.5" y="77" width="373" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-qh-cQ3">
+                                        <rect key="frame" x="20.5" y="151" width="373" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-c9-eXj">
+                                        <rect key="frame" x="177" y="205" width="60" height="40"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qBv-J1-QD2"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tKj-oy-RYl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlv-Fl-wsU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="ZmG-Zm-bJl"/>
-                                    <constraint firstAttribute="height" constant="40" id="ulb-c6-l8N"/>
+                                    <constraint firstItem="Ne1-rC-e94" firstAttribute="centerX" secondItem="bco-Td-RAn" secondAttribute="centerX" id="2Jh-nK-FRT"/>
+                                    <constraint firstItem="oWF-c9-eXj" firstAttribute="centerX" secondItem="bco-Td-RAn" secondAttribute="centerX" id="4tq-lf-6ey"/>
+                                    <constraint firstItem="QIn-qh-cQ3" firstAttribute="centerX" secondItem="bco-Td-RAn" secondAttribute="centerX" id="83w-Jl-yjq"/>
+                                    <constraint firstItem="Ne1-rC-e94" firstAttribute="width" secondItem="bco-Td-RAn" secondAttribute="width" multiplier="0.9" id="Qfq-WA-1ak"/>
+                                    <constraint firstItem="y9a-i8-lwv" firstAttribute="top" secondItem="bco-Td-RAn" secondAttribute="top" constant="20" id="UGi-JG-Q6f"/>
+                                    <constraint firstAttribute="bottom" secondItem="oWF-c9-eXj" secondAttribute="bottom" constant="10" id="Vno-MU-lTs"/>
+                                    <constraint firstItem="y9a-i8-lwv" firstAttribute="centerX" secondItem="bco-Td-RAn" secondAttribute="centerX" id="YCO-wz-jrU"/>
+                                    <constraint firstItem="QIn-qh-cQ3" firstAttribute="width" secondItem="bco-Td-RAn" secondAttribute="width" multiplier="0.9" id="btg-Wm-USL"/>
+                                    <constraint firstItem="oWF-c9-eXj" firstAttribute="top" secondItem="QIn-qh-cQ3" secondAttribute="bottom" constant="20" id="fER-3b-1Lw"/>
+                                    <constraint firstItem="QIn-qh-cQ3" firstAttribute="top" secondItem="Ne1-rC-e94" secondAttribute="bottom" constant="40" id="qSR-jh-tlm"/>
+                                    <constraint firstItem="Ne1-rC-e94" firstAttribute="top" secondItem="y9a-i8-lwv" secondAttribute="bottom" constant="20" id="xSU-P1-DAf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addPet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dr-S5-0K5"/>
-                                </connections>
-                            </button>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ESY-Y1-t7W">
-                                <rect key="frame" x="10" y="309" width="394" height="553"/>
+                                <rect key="frame" x="10" y="299" width="394" height="563"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PET_CELL" id="QoF-GD-3Gx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TABLE_CELL" id="QoF-GD-3Gx" customClass="TableCell" customModule="PetManager_MVC">
                                         <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QoF-GD-3Gx" id="2Fc-Y9-Njg">
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8K3-Ya-HIA" userLabel="StatusContainer">
+                                                    <rect key="frame" x="284" y="6.5" width="100" height="30.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFO-z6-GN6">
+                                                            <rect key="frame" x="29" y="5" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="xFO-z6-GN6" firstAttribute="centerX" secondItem="8K3-Ya-HIA" secondAttribute="centerX" id="aVw-FG-YHn"/>
+                                                        <constraint firstAttribute="width" constant="100" id="hdH-Le-i4u"/>
+                                                        <constraint firstItem="xFO-z6-GN6" firstAttribute="centerY" secondItem="8K3-Ya-HIA" secondAttribute="centerY" id="lbS-9N-bK6"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8K3-Ya-HIA" firstAttribute="height" secondItem="2Fc-Y9-Njg" secondAttribute="height" multiplier="0.7" id="dVZ-p6-1Rx"/>
+                                                <constraint firstItem="8K3-Ya-HIA" firstAttribute="centerY" secondItem="2Fc-Y9-Njg" secondAttribute="centerY" id="hvi-So-Lk7"/>
+                                                <constraint firstAttribute="trailing" secondItem="8K3-Ya-HIA" secondAttribute="trailing" constant="10" id="jcM-5w-Apu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusContainer" destination="8K3-Ya-HIA" id="thi-Mb-I03"/>
+                                            <outlet property="statusLabel" destination="xFO-z6-GN6" id="EnG-VU-zsP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -67,26 +113,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5qy-hV-bqs" firstAttribute="top" secondItem="JRh-qK-q1g" secondAttribute="bottom" constant="20" id="2Ce-tQ-Ikf"/>
-                            <constraint firstItem="job-Bm-KTw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Hg-hW-gz8"/>
-                            <constraint firstItem="ZO6-pg-IwD" firstAttribute="top" secondItem="job-Bm-KTw" secondAttribute="bottom" constant="20" id="Boq-xs-qmp"/>
-                            <constraint firstItem="JRh-qK-q1g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DNR-gB-hMZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ESY-Y1-t7W" secondAttribute="trailing" constant="10" id="Elx-3s-13o"/>
+                            <constraint firstItem="bco-Td-RAn" firstAttribute="bottom" secondItem="ESY-Y1-t7W" secondAttribute="top" id="PLU-RH-TQ7"/>
+                            <constraint firstItem="bco-Td-RAn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QB2-IM-Cuc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ESY-Y1-t7W" secondAttribute="bottom" id="TjJ-ei-A3r"/>
-                            <constraint firstItem="5qy-hV-bqs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="YtV-1n-Uhg"/>
-                            <constraint firstItem="5qy-hV-bqs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bxC-kN-DvG"/>
-                            <constraint firstItem="ZO6-pg-IwD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f41-8z-M6H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bco-Td-RAn" secondAttribute="trailing" id="UI8-WQ-4e3"/>
+                            <constraint firstItem="bco-Td-RAn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xma-04-E3s"/>
                             <constraint firstItem="ESY-Y1-t7W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jV9-xJ-Fb0"/>
-                            <constraint firstItem="job-Bm-KTw" firstAttribute="top" secondItem="5qy-hV-bqs" secondAttribute="bottom" constant="40" id="pVa-fY-lZy"/>
-                            <constraint firstItem="ESY-Y1-t7W" firstAttribute="top" secondItem="ZO6-pg-IwD" secondAttribute="bottom" constant="20" id="sGQ-wO-ub3"/>
-                            <constraint firstItem="job-Bm-KTw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="sXX-Xm-Db4"/>
-                            <constraint firstItem="JRh-qK-q1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uA4-Cb-TBH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="ZO6-pg-IwD" id="lVw-HQ-vOs"/>
-                        <outlet property="breedTextField" destination="job-Bm-KTw" id="gNd-Jx-wPq"/>
-                        <outlet property="nameTextField" destination="5qy-hV-bqs" id="AJp-T2-fcd"/>
+                        <outlet property="addButton" destination="oWF-c9-eXj" id="x2C-Fo-Ljh"/>
+                        <outlet property="breedTextField" destination="QIn-qh-cQ3" id="CoI-xT-aFJ"/>
+                        <outlet property="formContainer" destination="bco-Td-RAn" id="dSV-QR-myn"/>
+                        <outlet property="nameTextField" destination="Ne1-rC-e94" id="Pot-VT-Zje"/>
                         <outlet property="petTable" destination="ESY-Y1-t7W" id="g0b-dn-sBJ"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,7 @@ import UIKit
 
 class PetManagerController: UIViewController {
     
+    @IBOutlet var formContainer: UIView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var breedTextField: UITextField!
     @IBOutlet weak var petTable: UITableView!
@@ -20,11 +21,13 @@ class PetManagerController: UIViewController {
         super.viewDidLoad()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        self.view.addGestureRecognizer(tapGesture)
+        tapGesture.delegate = self
+        formContainer.addGestureRecognizer(tapGesture)
         
         addButton.layer.cornerRadius = 10.0
         
         petTable.dataSource = self
+        petTable.delegate = self
     }
     
     
@@ -36,7 +39,7 @@ class PetManagerController: UIViewController {
     @IBAction func addPet(_ sender: Any) {
         guard let name = nameTextField.text, let breed = breedTextField.text else { return }
         
-        model.addPet(name, breed)
+        model.addCat(name, breed)
         
         petTable.reloadData()
         
@@ -50,18 +53,25 @@ class PetManagerController: UIViewController {
     
 }
 
-extension PetManagerController: UITableViewDataSource {
+extension PetManagerController: UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: - DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.pets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PET_CELL", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TABLE_CELL", for: indexPath) as! TableCell
         let name = model.pets[indexPath.row].name
         let breed = model.pets[indexPath.row].breed
-        cell.textLabel?.text = "\(name) the \(breed)"
+        let status = model.pets[indexPath.row].status
         
+        cell.textLabel?.text = "\(name) the \(breed)"
+        cell.statusLabel.text = status
+        cell.statusContainer.layer.masksToBounds = true
+        cell.statusContainer.layer.cornerRadius = 8
+        cell.statusContainer.backgroundColor = status == "unsatisfied" ? .lightGray : .systemBlue
+
         return cell
     }
     
@@ -72,10 +82,33 @@ extension PetManagerController: UITableViewDataSource {
         }
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
+    // MARK: - Delegate Methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cat = model.pets[indexPath.row]
+        let name = cat.name
+        let response = model.getCatResponse(from: cat)
 
+        let satisfyAlert = UIAlertController(title: "\(name)", message: response, preferredStyle: .alert)
+        satisfyAlert.addAction(UIAlertAction(title: "Aww", style: .cancel, handler: nil))
+        self.present(satisfyAlert, animated: true)
+    
+        self.model.satisfyCat(at: indexPath.row)
+        
+        tableView.reloadData()
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
     
 }
 
+extension PetManagerController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		499E499A254A7E2F0056EDDF /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4999254A7E2F0056EDDF /* TableCell.swift */; };
 		499F7D6C2549D2F100FD045C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D6B2549D2F100FD045C /* AppDelegate.swift */; };
 		499F7D6E2549D2F100FD045C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D6D2549D2F100FD045C /* SceneDelegate.swift */; };
 		499F7D702549D2F200FD045C /* PetManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F7D6F2549D2F200FD045C /* PetManagerController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		499E4999254A7E2F0056EDDF /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		499F7D682549D2F100FD045C /* PetManager-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PetManager-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		499F7D6B2549D2F100FD045C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499F7D6D2549D2F100FD045C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				499F7D6D2549D2F100FD045C /* SceneDelegate.swift */,
 				499F7D6F2549D2F200FD045C /* PetManagerController.swift */,
 				499F7D822549D3E500FD045C /* PetManagerModel.swift */,
+				499E4999254A7E2F0056EDDF /* TableCell.swift */,
 				499F7D712549D2F200FD045C /* Main.storyboard */,
 				499F7D742549D2F400FD045C /* Assets.xcassets */,
 				499F7D762549D2F400FD045C /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				499E499A254A7E2F0056EDDF /* TableCell.swift in Sources */,
 				499F7D702549D2F200FD045C /* PetManagerController.swift in Sources */,
 				499F7D832549D3E500FD045C /* PetManagerModel.swift in Sources */,
 				499F7D6C2549D2F100FD045C /* AppDelegate.swift in Sources */,
