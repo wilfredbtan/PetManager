@@ -9,14 +9,14 @@ import Foundation
 
 struct PetManagerModel {
     
-    private(set) var pets: [Pet]
+    private(set) var pets: [Cat]
     
-    // I know UUID is a little overkill but it's just for demo purposes
-    let cats = [
-        Pet(id: UUID(), name: "Mary", breed: "Tabby"),
-        Pet(id: UUID(), name: "Tom", breed: "Tortoiseshell"),
-        Pet(id: UUID(), name: "Coby", breed: "Persian"),
-        Pet(id: UUID(), name: "Nala", breed: "Siamese"),
+    // UUID is a little overkill but it's just for demo purposes
+    private let cats = [
+        Cat(id: UUID(), name: "Mary", breed: "Tabby"),
+        Cat(id: UUID(), name: "Tom", breed: "Tortoiseshell"),
+        Cat(id: UUID(), name: "Coby", breed: "Persian"),
+        Cat(id: UUID(), name: "Nala", breed: "Siamese"),
     ]
     
     init() {
@@ -27,8 +27,8 @@ struct PetManagerModel {
         pets.remove(atOffsets: offsets)
     }
     
-    mutating func addPet(_ name: String, _ breed: String) {
-        let newPet = Pet(id: UUID(),
+    mutating func addCat(_ name: String, _ breed: String) {
+        let newPet = Cat(id: UUID(),
                          name: name.trimmingCharacters(in: .whitespacesAndNewlines),
                          breed: breed.trimmingCharacters(in: .whitespacesAndNewlines))
         pets.insert(newPet, at: 0)
@@ -36,7 +36,7 @@ struct PetManagerModel {
 
 }
 
-struct Pet: Identifiable, Hashable {
+struct Cat: Identifiable, Hashable {
     var id: UUID
     var name: String
     var breed: String

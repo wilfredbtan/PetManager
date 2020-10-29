@@ -9,13 +9,13 @@ import Foundation
 
 struct PetManagerModel {
     
-    private(set) var pets: [Pet]
+    private(set) var pets: [Cat]
     
     let cats = [
-        Pet(name: "Mary", breed: "Tabby"),
-        Pet(name: "Tom", breed: "Tortoiseshell"),
-        Pet(name: "Coby", breed: "Persian"),
-        Pet(name: "Nala", breed: "Siamese"),
+        Cat(name: "Mary", breed: "Tabby"),
+        Cat(name: "Tom", breed: "Tortoiseshell"),
+        Cat(name: "Coby", breed: "Persian"),
+        Cat(name: "Nala", breed: "Siamese"),
     ]
     
     init() {
@@ -26,15 +26,15 @@ struct PetManagerModel {
         pets.remove(at: offsets)
     }
     
-    mutating func addPet(_ name: String, _ breed: String) {
-        let newPet = Pet(name: name.trimmingCharacters(in: .whitespacesAndNewlines),
+    mutating func addCat(_ name: String, _ breed: String) {
+        let newPet = Cat(name: name.trimmingCharacters(in: .whitespacesAndNewlines),
                          breed: breed.trimmingCharacters(in: .whitespacesAndNewlines))
         pets.insert(newPet, at: 0)
     }
 
 }
 
-struct Pet {
+struct Cat {
     var name: String
     var breed: String
 }

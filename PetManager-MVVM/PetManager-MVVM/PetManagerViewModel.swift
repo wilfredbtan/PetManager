@@ -13,7 +13,7 @@ class PetManagerViewModel: ObservableObject {
     
     // MARK: - Access to Model
     
-    var pets: [Pet] {
+    var pets: [Cat] {
         model.pets
     }
     
@@ -24,7 +24,7 @@ class PetManagerViewModel: ObservableObject {
     }
     
     func addPet(_ name: String, _ breed: String) {
-        model.addPet(name, breed)
+        model.addCat(name, breed)
     }
     
 }

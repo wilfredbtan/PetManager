@@ -36,7 +36,7 @@ class PetManagerController: UIViewController {
     @IBAction func addPet(_ sender: Any) {
         guard let name = nameTextField.text, let breed = breedTextField.text else { return }
         
-        model.addPet(name, breed)
+        model.addCat(name, breed)
         
         petTable.reloadData()
         
@@ -50,7 +50,7 @@ class PetManagerController: UIViewController {
     
 }
 
-extension PetManagerController: UITableViewDataSource {
+extension PetManagerController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.pets.count
@@ -72,10 +72,10 @@ extension PetManagerController: UITableViewDataSource {
         }
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     
 }
 
