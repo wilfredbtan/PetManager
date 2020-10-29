@@ -14,8 +14,11 @@ class PetManagerController: UIViewController {
     @IBOutlet var breedTextField: UITextField!
     @IBOutlet weak var petTable: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var petPicker: UIPickerView!
     
     private var model = PetManagerModel()
+    
+    private var petType: PetType = .cat
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,9 @@ class PetManagerController: UIViewController {
         
         petTable.dataSource = self
         petTable.delegate = self
+        
+        petPicker.dataSource = self
+        petPicker.delegate = self
     }
     
     
@@ -39,7 +45,7 @@ class PetManagerController: UIViewController {
     @IBAction func addPet(_ sender: Any) {
         guard let name = nameTextField.text, let breed = breedTextField.text else { return }
         
-        model.addCat(name, breed)
+        model.addPet(type: petType, name, breed)
         
         petTable.reloadData()
         
@@ -91,16 +97,36 @@ extension PetManagerController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cat = model.pets[indexPath.row]
         let name = cat.name
-        let response = model.getCatResponse(from: cat)
+        let response = model.getResponse(from: cat)
 
         let satisfyAlert = UIAlertController(title: "\(name)", message: response, preferredStyle: .alert)
         satisfyAlert.addAction(UIAlertAction(title: "Aww", style: .cancel, handler: nil))
         self.present(satisfyAlert, animated: true)
     
-        self.model.satisfyCat(at: indexPath.row)
+        self.model.satisfyPet(at: indexPath.row)
         
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+}
+
+extension PetManagerController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return PetType.allCases.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return PetType.allCases[row].rawValue
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        petType = PetType.allCases[row]
     }
     
 }
